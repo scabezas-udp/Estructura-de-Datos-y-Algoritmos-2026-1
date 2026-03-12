@@ -164,3 +164,26 @@ int[] notas = new int[10]; // Crea un arreglo de 10 posiciones (índices 0-9)
 ```java
 int[] temperaturas = {18, 22, 25, 30}; // Tamaño automático de 4
 ```
+
+
+Código visto en clases:
+```java
+public class ArregloEnteros {
+  public static void main(String[] args) {
+    //int otroNumerosVarios[] = {1, 2, 3, 4, 2, 1};
+    // acceso a la información almacenada
+    System.out.println(otroNumerosVarios[0]);
+    System.out.println(otroNumerosVarios[1]);
+    System.out.println(otroNumerosVarios[2]);
+    System.out.println("---");
+    System.out.println("Largo del arreglo: " + otroNumerosVarios.length);
+    System.out.println("--java primero---");
+    System.out.println(otroNumerosVarios[0] + otroNumerosVarios[1]);
+    System.out.println("--java primero---");
+    // Recorrido del arreglo
+    for (int i = 0; i < otroNumerosVarios.length; i++) {
+      System.out.println(otroNumerosVarios[i]);
+    }
+  }
+}
+```
