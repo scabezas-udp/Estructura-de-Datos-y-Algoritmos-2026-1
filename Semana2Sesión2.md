@@ -1,13 +1,12 @@
 # Estructura de Datos y Algoritmos
 
-Clase ``ÙsoRandom```
+Clase ```UsoRandom```
 
 ```java
 public class UsoRandom {
 
-    private static getAleatorioEntre(int _x, int _y){
+    private static int getAleatorioEntre(int _x, int _y){
         return (int) (Math.random() * (_y - _x + 1) + _x);
-        )
     }
 
     private static void mostrarArreglo (int [] _arr, String _titulo){
