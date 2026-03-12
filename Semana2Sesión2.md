@@ -17,6 +17,16 @@ public class UsoRandom {
         System.out.println();
     }
 
+    private static int getMenorArreglo(int [] _arr){
+        int retorno = _arr[0];
+        for (int i=1; i<_arr.length; i++){
+            if (_arr[i] < retorno){
+                retorno = _arr[i];
+            }
+        }
+        return retorno;
+    }
+
   public static void main(String[] args){
     // Quiero un aleatorio
     int miAleatorio = getAleatorioEntre(1, 500);
@@ -27,6 +37,7 @@ public class UsoRandom {
         arreglo[i] = getAleatorioEntre(1, 500);
     }
     mostrarArreglo(arreglo, "Aleatorios");
+    System.out.println("El menor es: " + getMenorArreglo(arreglo));
   }
 }
 ```
