@@ -130,7 +130,7 @@ Código visto en clases:
 ```java
 public class ArregloEnteros {
   public static void main(String[] args) {
-    //int otroNumerosVarios[] = {1, 2, 3};
+    int otroNumerosVarios[] = {1, 2, 3};
     // acceso a la información almacenada
     System.out.println(otroNumerosVarios[0]);
     System.out.println(otroNumerosVarios[1]);
@@ -170,7 +170,7 @@ Código visto en clases:
 ```java
 public class ArregloEnteros {
   public static void main(String[] args) {
-    //int otroNumerosVarios[] = {1, 2, 3, 4, 2, 1};
+    int otroNumerosVarios[] = {1, 2, 3, 4, 2, 1};
     // acceso a la información almacenada
     System.out.println(otroNumerosVarios[0]);
     System.out.println(otroNumerosVarios[1]);
