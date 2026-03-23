@@ -163,3 +163,114 @@ Llena la siguiente tabla en tu cuaderno/editor:
 | 40    |                               |                             |
 | 50    |                               |                             |
 
+---
+
+# Extra visto en clases: Factorial
+
+## Clase y ejecución
+
+1. se crea la clase **Factorial**
+
+'''
+public class Factorial {}
+'''
+
+2. se agrega el metodo main '''psvm'''
+
+3. hacemos la llamada a una función que vamos a crear, esta llamada la hacemos desde el **main**
+
+'''
+  System.out.println("Calcular el Factorial");
+  int numero = 5;
+  System.out.println("Factorial de " + numero + ": " + getFactorial(numero));
+'''
+
+4. la funcion **getFactorial** recibe como argumento un número
+
+- Hacemos que nos muestre si en verdad ira desde el 1 hasta el mismo numero ingresado
+- Mejoramos el ciclo dwsde 2 hasta el mismo número 
+- Visualizamos y luego comentamos 
+
+'''
+    public static int getFactorial(int _num){
+        int retorno = 1;
+        for (int i = 2; i <= _num; i++) {
+            // System.out.println("[" + i +"]");
+            retorno *= i; // retorno = retorno * i
+            // retorno = 1 * 1
+        }
+        return retorno;
+    }
+'''
+
+5. Aplicamos Recursividad
+
+- Indicamos el caso base
+- Indicamos la llamada q la misma función indicandi el nuevo valor de n
+
+'''
+    public static int getFactorialRecursivo(int _num){
+        // System.out.println("Num!: " + _num);
+        // caso base
+        if (_num <= 1){
+            return 1;
+        }
+        // llamar de forma recursiva
+        return _num * getFactorialRecursivo(_num - 1);
+    }
+'''
+
+6. Aplicamos Memorización 
+
+- Para optimizar el cálculo del factorial mediante memorización (memoization), el objetivo es evitar cálculos redundantes almacenando los resultados ya obtenidos en una estructura de datos, como un HashMap o un arreglo, antes de realizar una nueva llamada recursiva.
+- Creamos una nueva clase para comparar: FactorialMemorizacion
+
+'''
+public class FactorialMemomorizacion {
+    
+    // Definimos el tamaño máximo (long soporta hasta factorial de 20)
+    private static final int MAX = 21;
+    private static long[] memoria = new long[MAX];
+
+    public static void main(String[] args) {
+        // Inicializar memoria con -1 para saber qué valores no han sido calculados
+        for (int i = 0; i < MAX; i++) {
+            memoria[i] = -1;
+        }
+
+        int numero = 20;
+        System.out.println("Factorial de " + numero + " es: " + calcularFactorial(numero));
+        
+        // Segunda llamada para demostrar que ya está en memoria
+        System.out.println("Factorial de " + (numero - 1) + " (recuperado): " + calcularFactorial(numero - 1));
+    }
+
+    public static long calcularFactorial(int n) {
+        // Caso base
+        if (n <= 1) {
+            return 1;
+        }
+
+        // 1. Verificar si el índice n es válido para nuestro arreglo
+        if (n >= MAX) {
+            // Si el número es mayor a 20, long desbordará (overflow)
+            throw new IllegalArgumentException("Número demasiado grande para el tipo long.");
+        }
+
+        // 2. Verificar si el resultado ya está en el arreglo
+        if (memoria[n] != -1) {
+            System.out.println("-> Usando valor almacenado en indice [" + n + "]");
+            return memoria[n];
+        }
+
+        // 3. Calcular, almacenar en el arreglo y retornar
+        memoria[n] = (long) n * calcularFactorial(n - 1);
+        return memoria[n];
+    }
+}
+'''
+
+Notas:
+1. El valor "centinela": Es importante el por qué inicializamos el arreglo con -1. Como un arreglo de long se inicializa por defecto en 0, y el factorial de un número nunca es negativo, -1 nos sirve para identificar qué celdas están "vacías" o pendientes de cálculo.
+2. Complejidad: Al igual que con el HashMap, reducimos la complejidad a O(n), pero con una constante de tiempo menor, ya que no hay cálculo de hash ni manejo de colisiones; es acceso directo a memoria.
+3. Limitación de Tipo: Desbordamiento. Si intentan calcular el factorial de 21, el valor superará el máximo de un long (2^{63}-1) y dará un número negativo o erróneo.
