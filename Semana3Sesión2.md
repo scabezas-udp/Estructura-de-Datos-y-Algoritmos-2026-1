@@ -171,19 +171,19 @@ Llena la siguiente tabla en tu cuaderno/editor:
 
 1. se crea la clase **Factorial**
 
-'''
+```java
 public class Factorial {}
-'''
+```
 
-2. se agrega el metodo main '''psvm'''
+2. se agrega el metodo main ```psvm```
 
 3. hacemos la llamada a una función que vamos a crear, esta llamada la hacemos desde el **main**
 
-'''
+```java
   System.out.println("Calcular el Factorial");
   int numero = 5;
   System.out.println("Factorial de " + numero + ": " + getFactorial(numero));
-'''
+```
 
 4. la funcion **getFactorial** recibe como argumento un número
 
@@ -191,7 +191,7 @@ public class Factorial {}
 - Mejoramos el ciclo dwsde 2 hasta el mismo número 
 - Visualizamos y luego comentamos 
 
-'''
+```java
     public static int getFactorial(int _num){
         int retorno = 1;
         for (int i = 2; i <= _num; i++) {
@@ -201,14 +201,14 @@ public class Factorial {}
         }
         return retorno;
     }
-'''
+```
 
 5. Aplicamos Recursividad
 
 - Indicamos el caso base
 - Indicamos la llamada q la misma función indicandi el nuevo valor de n
 
-'''
+```java
     public static int getFactorialRecursivo(int _num){
         // System.out.println("Num!: " + _num);
         // caso base
@@ -218,14 +218,14 @@ public class Factorial {}
         // llamar de forma recursiva
         return _num * getFactorialRecursivo(_num - 1);
     }
-'''
+```
 
 6. Aplicamos Memorización 
 
 - Para optimizar el cálculo del factorial mediante memorización (memoization), el objetivo es evitar cálculos redundantes almacenando los resultados ya obtenidos en una estructura de datos, como un HashMap o un arreglo, antes de realizar una nueva llamada recursiva.
 - Creamos una nueva clase para comparar: FactorialMemorizacion
 
-'''
+```java
 public class FactorialMemomorizacion {
     
     // Definimos el tamaño máximo (long soporta hasta factorial de 20)
@@ -268,7 +268,7 @@ public class FactorialMemomorizacion {
         return memoria[n];
     }
 }
-'''
+```
 
 Notas:
 1. El valor "centinela": Es importante el por qué inicializamos el arreglo con -1. Como un arreglo de long se inicializa por defecto en 0, y el factorial de un número nunca es negativo, -1 nos sirve para identificar qué celdas están "vacías" o pendientes de cálculo.
