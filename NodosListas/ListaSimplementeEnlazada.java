@@ -67,4 +67,28 @@ public class ListaSimplementeEnlazada {
         }
     }
 
+    public boolean quitar(int _buscado) {
+        // Si esta vacía la lista, entonces no se puede quitar
+        if (estaVacia()) {
+            return false;
+        }
+
+        if (this.head.dato == _buscado) {
+            this.head = this.head.siguiente;
+            return true;
+        }
+
+        NodoEnteros aux = this.head;
+
+        while (aux.siguiente != null) {
+            if (aux.siguiente.dato == _buscado) {
+                aux.siguiente = aux.siguiente.siguiente;
+                return true;
+            }
+            aux = aux.siguiente;
+        }
+        // No fue encontrado :( 404
+        return false;
+    }
+
 }
