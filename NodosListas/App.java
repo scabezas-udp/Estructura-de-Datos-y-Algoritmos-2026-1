@@ -10,6 +10,7 @@ public class App {
         lse.mostrar();
         lse.insertarAlPrincipio(1);
         lse.mostrar();
-
+        lse.insertarAlFinal(4);
+        lse.mostrar();
     }
 }

@@ -21,18 +21,35 @@ public class ListaSimplementeEnlazada {
             NodoEnteros aux = this.head;
             while (aux != null) {
                 System.out.println("[" + aux.dato + "] --> " + aux.siguiente);
-                //sout("[" + aux.dato + "] --> " + aux.siguiente);
+                // sout("[" + aux.dato + "] --> " + aux.siguiente);
                 aux = aux.siguiente;
             }
         }
         System.out.println("------------------");
     }
 
-    public void insertarAlPrincipio(int _dato){
+    public void insertarAlPrincipio(int _dato) {
         // Crear un nuevo nodo, que se construye con el nuevo dato
         NodoEnteros nuevo = new NodoEnteros(_dato);
         nuevo.siguiente = head;
         head = nuevo;
+    }
+
+    public void insertarAlFinal(int _dato) {
+        if (estaVacia()) {
+            insertarAlPrincipio(_dato);
+        } else {
+            // Crear un nuevo nodo, que se construye con el nuevo dato
+            NodoEnteros nuevo = new NodoEnteros(_dato);
+            // Recorrer
+            NodoEnteros aux = this.head;
+            while (aux.siguiente != null) {
+                aux = aux.siguiente;
+            }
+            // Ahora estamos en el último
+            aux.siguiente = nuevo;
+        }
+
     }
 
 }
