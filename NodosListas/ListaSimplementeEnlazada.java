@@ -49,7 +49,22 @@ public class ListaSimplementeEnlazada {
             // Ahora estamos en el último
             aux.siguiente = nuevo;
         }
+    }
 
+    public void insertarDespuesDe(int _dato, int _buscado) {
+        NodoEnteros nuevo = new NodoEnteros(_dato);
+        NodoEnteros aux = this.head;
+        while (aux != null) {
+            if (aux.dato == _buscado) {
+                // que el nuevo apunte al mismo que apunta el buscado
+                nuevo.siguiente = aux.siguiente;
+                // el buscado ahora apunta al nuevo
+                aux.siguiente = nuevo;
+                // ya se hizo el cambio
+                break;
+            }
+            aux = aux.siguiente;
+        }
     }
 
 }

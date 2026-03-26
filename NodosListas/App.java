@@ -12,5 +12,7 @@ public class App {
         lse.mostrar();
         lse.insertarAlFinal(4);
         lse.mostrar();
+        lse.insertarDespuesDe(2, 5);
+        lse.mostrar();
     }
 }
