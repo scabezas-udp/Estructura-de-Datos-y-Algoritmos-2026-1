@@ -28,4 +28,11 @@ public class ListaSimplementeEnlazada {
         System.out.println("------------------");
     }
 
+    public void insertarAlPrincipio(int _dato){
+        // Crear un nuevo nodo, que se construye con el nuevo dato
+        NodoEnteros nuevo = new NodoEnteros(_dato);
+        nuevo.siguiente = head;
+        head = nuevo;
+    }
+
 }
