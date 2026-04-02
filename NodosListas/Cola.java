@@ -35,7 +35,7 @@ public class Cola {
 
     // Quitar el Primero -> Remove -> Dequeue
     public NodoEnteros remove() throws Exception{
-        
+
         if (isEmpty()) {
             throw new Exception("Cola Vacia");
         }
