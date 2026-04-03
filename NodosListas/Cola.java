@@ -1,20 +1,20 @@
 package NodosListas;
 
 public class Cola {
-    
+
     private NodoEnteros frente; // Es el primer elemento
-    
+
     public Cola() {
         this.frente = null;
     }
 
     // Cola Vacia
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return this.frente == null;
     }
 
     // Insertar al Final -> Enqueue -> Add
-    public boolean add(int _dato){
+    public boolean add(int _dato) {
         try {
             NodoEnteros nuevo = new NodoEnteros(_dato);
             if (isEmpty()) {
@@ -22,7 +22,7 @@ public class Cola {
                 return true;
             } else {
                 NodoEnteros aux = this.frente;
-                while(aux.siguiente != null){
+                while (aux.siguiente != null) {
                     aux = aux.siguiente;
                 }
                 aux.siguiente = nuevo;
@@ -34,7 +34,7 @@ public class Cola {
     }
 
     // Quitar el Primero -> Remove -> Dequeue
-    public NodoEnteros remove() throws Exception{
+    public NodoEnteros remove() throws Exception {
 
         if (isEmpty()) {
             throw new Exception("Cola Vacia");
@@ -42,7 +42,7 @@ public class Cola {
         NodoEnteros aux = this.frente;
         this.frente = this.frente.siguiente;
 
-        return aux;   
+        return aux;
     }
 
 }

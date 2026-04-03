@@ -1,13 +1,13 @@
 package NodosListas;
 
 public class Pila {
-    
+
     private NodoEnteros cima; // Tope => Arriba
 
     public Pila() {
         this.cima = null;
     }
-    
+
     public boolean isEmpty() {
         return this.cima == null;
     }
@@ -27,7 +27,7 @@ public class Pila {
         }
     }
 
-    public NodoEnteros pop() throws Exception{
+    public NodoEnteros pop() throws Exception {
 
         if (isEmpty()) {
             throw new Exception("Pila Vacia");
@@ -35,8 +35,7 @@ public class Pila {
         NodoEnteros aux = this.cima;
         this.cima = this.cima.siguiente;
 
-        return aux;   
+        return aux;
     }
-
 
 }
