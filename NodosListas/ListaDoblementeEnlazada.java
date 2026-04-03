@@ -41,7 +41,7 @@ public class ListaDoblementeEnlazada {
             throw new Exception("Lista Doble Vacia");
 
         // caso 2: es el primero
-        if (this.first.dato == _buscado){
+        if (this.first.dato == _buscado) {
             System.out.println("Primero");
             NodoEnteros aux = this.first;
             this.first = aux.siguiente;
@@ -50,7 +50,7 @@ public class ListaDoblementeEnlazada {
         }
 
         // caso 3: es el ultimo
-        if (this.last.dato == _buscado){
+        if (this.last.dato == _buscado) {
             System.out.println("Ultimo");
             NodoEnteros aux = this.last;
             this.last = aux.anterior;
@@ -64,7 +64,7 @@ public class ListaDoblementeEnlazada {
             aux = aux.siguiente;
         }
         // caso 5: si no se encontro el dato
-        if (aux == null){
+        if (aux == null) {
             System.out.println("Error 404: No encontrado");
             throw new Exception("No Encontrado");
         }
