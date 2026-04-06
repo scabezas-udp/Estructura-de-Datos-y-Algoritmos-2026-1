@@ -48,8 +48,8 @@ Para cada ejercicio, debe entregar:
 # Rúbrica
 
 | Criterio | Excelente (100%) | Deficiente (50%) | Insuficiente (0%) |
-|---|---|---|
-| Modelo de Memoria (50%)  | Dibuja todos los nodos y punteros correctamente. Representa claramente el cambio de estados.   | El dibujo es confuso o faltan punteros críticos (como el  ant  en listas dobles).                | No hay dibujo o no representa la lógica de punteros.                        |
-| Manejo de Memoria (10%)  | Demuestra entender el rol de las referencias y el Garbage Collector (no deja nodos huérfanos). | Se pierden referencias de nodos intermedios (causando pérdida de datos).                         | No utiliza referencias; intenta usar lógica de arreglos en listas.          |
-| Lógica Algorítmica (20%) | El código resuelve el problema de forma eficiente y maneja casos de borde (lista vacía).       | El código resuelve el problema pero falla en casos de borde o tiene errores de sintaxis menores. | El código no compila o la lógica no corresponde a la estructura solicitada. |
-| Gestión de Errores (20%) | Utiliza try-catch y throw de forma profesional para robustez. | Muestra mensajes por consola pero no usa el sistema de excepciones de Java.| No valida estados vacíos o nulos, el programa se cae. | 
+|---|---|---|---|
+| Modelo de Memoria (50%) | Dibuja todos los nodos y punteros correctamente. Representa claramente el cambio de estados. | El dibujo es confuso o faltan punteros críticos (como el ant en listas dobles). | No hay dibujo o no representa la lógica de punteros. |
+| Manejo de Memoria (10%) | Demuestra entender el rol de las referencias y el Garbage Collector (no deja nodos huérfanos). | Se pierden referencias de nodos intermedios (causando pérdida de datos). | No utiliza referencias; intenta usar lógica de arreglos en listas. |
+| Lógica Algorítmica (20%) | El código resuelve el problema de forma eficiente y maneja casos de borde (lista vacía). | El código resuelve el problema pero falla en casos de borde o tiene errores de sintaxis menores. | El código no compila o la lógica no corresponde a la estructura solicitada. |
+| Gestión de Errores (20%) | Utiliza try-catch y throw de forma profesional para robustez. | Muestra mensajes por consola pero no usa el sistema de excepciones de Java. | No valida estados vacíos o nulos, el programa se cae. | 
