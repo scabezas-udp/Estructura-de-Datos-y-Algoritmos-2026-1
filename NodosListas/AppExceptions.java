@@ -17,6 +17,14 @@ public class AppExceptions {
             System.out.println("Error :( " + e.getMessage());
         }
 
+        try {
+            System.out.println(arreglo[-1]);
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Error :( estas fuera del rango");
+        }
+        System.out.println(arreglo[2]);
+
         System.out.println("Sigue / Termina el programa");
 
 
