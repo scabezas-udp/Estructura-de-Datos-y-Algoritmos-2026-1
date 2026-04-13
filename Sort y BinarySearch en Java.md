@@ -30,15 +30,20 @@ import java.util.Arrays;
 
 public class EjemploBasico {
     public static void main(String[] args) {
-        int[] numeros = {50, 10, 35, 80, 5};
+        int[] numeros = { 50, 10, 35, 80, 5 };
 
         // 1. Ordenar es obligatorio
-        Arrays.sort(numeros); 
+        Arrays.sort(numeros);
         System.out.println("Ordenado: " + Arrays.toString(numeros));
 
         // 2. Buscar
-        int pos = Arrays.binarySearch(numeros, 35);
-        System.out.println("El 35 está en el índice: " + pos);
+        int buscado = 50;
+        int pos = Arrays.binarySearch(numeros, buscado);
+        if (pos >= 0) {
+            System.out.println("El " + buscado + " está en el índice: " + pos);
+        }else{
+            System.out.println("El numero " + buscado + " no fue encontrado.");
+        }
     }
 }
 ```
